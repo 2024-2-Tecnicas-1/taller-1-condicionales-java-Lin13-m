@@ -1,7 +1,8 @@
-
 package ejercicios;
 
-import static ejercicios.SetDeTenis.evaluar;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -9,11 +10,21 @@ import java.util.Scanner;
  * @author danielsanchez
  */
 public class Ordenamiento {
+
     public static String evaluar(int numero1, int numero2, int numero3, int numero4) {
-        // TODO: Coloca aquí el código del ejercicio 5: Ordenamiento
-        return "";
+        // Crear y llenar la lista con los números
+        List<Integer> numeros = new ArrayList<>();
+        numeros.add(numero1);
+        numeros.add(numero2);
+        numeros.add(numero3);
+        numeros.add(numero4);
+
+        // Ordenar la lista
+        Collections.sort(numeros);
+
+        // Convertir la lista ordenada a una cadena
+        return numeros.toString();
     }
-    
     public static void main(String[] args) {
         Scanner lector = new Scanner(System.in);
         System.out.print("Número 1:");
